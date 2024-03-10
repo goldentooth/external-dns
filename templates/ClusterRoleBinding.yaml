@@ -1,0 +1,15 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: external-dns-viewer
+  namespace: "{{ .Values.spec.namespace }}"
+  labels:
+    app.kubernetes.io/name: "{{ .Values.spec.appName }}"
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: "{{ .Values.spec.appName }}"
+subjects:
+  - kind: ServiceAccount
+    name: "{{ .Values.spec.appName }}"
+    namespace: "{{ .Values.spec.namespace }}"
