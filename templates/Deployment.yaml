@@ -19,7 +19,7 @@ spec:
       serviceAccountName: "{{ .Values.spec.appName }}"
       containers:
         - name: "{{ .Values.spec.appName }}"
-          image: registry.k8s.io/external-dns/external-dns:"{{ .Values.spec.version }}"
+          image: "registry.k8s.io/external-dns/external-dns:{{ .Values.spec.version }}"
           args:
             - --source=service
             - --source=ingress
