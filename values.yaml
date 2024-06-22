@@ -3,4 +3,4 @@ spec:
   appName: 'external-dns'
   projectName: 'gitops-repo'
   domainFilter: 'goldentooth.hellholt.net'
-  version: 'v0.14.0'
+  version: 'v0.14.2'
