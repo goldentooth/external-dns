@@ -2,5 +2,5 @@ spec:
   namespace: 'external-dns'
   appName: 'external-dns'
   projectName: 'gitops-repo'
-  domainFilter: 'goldentooth.net'
+  domainFilter: 'services.k8s.goldentooth.net'
   version: 'v0.14.2'
